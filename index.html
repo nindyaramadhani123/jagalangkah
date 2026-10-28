@@ -3,167 +3,294 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jaga Langkah – Kenali dan Cegah Perdagangan Orang</title>
-  <meta name="description" content="Blog edukasi perdagangan orang (human trafficking): cara mengenali tawaran kerja palsu, hak-hak korban, dan ke mana mencari bantuan.">
+  <title>Jaga Langkah – Kampanye Sosial Anti Perdagangan Orang</title>
+  <meta name="description" content="Kampanye edukasi perdagangan orang: kenali lowongan kerja palsu, uji kewaspadaanmu lewat kuis, dan ketahui ke mana mencari bantuan.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500..800&family=Nunito:wght@400..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip" href="#isi">Langsung ke isi</a>
+  <a class="skip" href="#hero">Langsung ke isi</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
 
-  <div class="helpbar">
+  <header class="top">
     <div class="wrap">
-      <span>Butuh bantuan sekarang?</span>
-      <span>Telepon <a href="tel:129">129</a> (SAPA) atau WhatsApp <a href="https://wa.me/628111129129">0811-1129-129</a></span>
-    </div>
-  </div>
-
-  <header class="masthead">
-    <div class="wrap">
-      <a class="brand" href="index.html">Jaga Langkah</a>
+      <a class="logo" href="#hero">
+        <svg viewBox="0 0 28 32" aria-hidden="true"><path d="M14 0C6.5 0 1 5.6 1 12.6 1 21.5 14 32 14 32S27 21.5 27 12.6C27 5.6 21.5 0 14 0Z" fill="#ffd23f"/><circle cx="14" cy="12.5" r="5" fill="#241a5c"/></svg>
+        Jaga Langkah
+      </a>
       <nav aria-label="Navigasi utama">
-        <a href="index.html" aria-current="page">Beranda</a>
-        <a href="#bacaan">Bacaan</a>
-        <a href="artikel/cara-melapor-dan-mencari-bantuan.html">Bantuan</a>
+        <a href="#aturan">Aturan</a>
+        <a href="#anatomi">Anatomi</a>
+        <a href="#modus">Modus</a>
+        <a href="#kuis">Kuis</a>
+        <a href="#bantuan">Bantuan</a>
+        <a class="sos" href="#bantuan">Butuh bantuan?</a>
       </nav>
     </div>
   </header>
 
-  <main id="isi">
-    <section class="hero">
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <!-- pin lokasi -->
+      <span class="pin" style="--x:5%;--y:68%;--c:#ff5a5f;--dl:0s"></span>
+      <span class="pin" style="--x:30%;--y:88%;--c:#ffd23f;--dl:.9s"></span>
+      <span class="pin" style="--x:57%;--y:12%;--c:#3dd69a;--dl:1.8s"></span>
+      <span class="pin" style="--x:93%;--y:74%;--c:#ff5a5f;--dl:.5s"></span>
+      <span class="pin" style="--x:46%;--y:92%;--c:#5ec8ee;--dl:2.2s"></span>
+
+      <!-- jalur penerbangan -->
+      <svg class="route" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <path id="flightpath" class="line" d="M -60 600 C 200 440 420 640 640 430 S 1000 170 1280 250"/>
+        <g class="plane">
+          <path d="M26 0 L-22 -15 L-9 0 Z" fill="#ffd23f"/>
+          <path d="M26 0 L-9 0 L-22 15 Z" fill="#e0a800"/>
+          <animateMotion dur="15s" repeatCount="indefinite" rotate="auto"><mpath href="#flightpath"/></animateMotion>
+        </g>
+      </svg>
+
       <div class="wrap hero-grid">
         <div>
-          <h1>Gaji besar. Tanpa pengalaman. Berangkat minggu depan.</h1>
-          <p class="lead">Tawaran seperti ini sering menjadi pintu masuk perdagangan orang. Korbannya bukan orang bodoh. Mereka orang yang sedang butuh pekerjaan dan dijanjikan hal yang terdengar masuk akal.</p>
-          <p class="hint">Ketuk bagian yang distabilo di iklan sebelah untuk melihat kenapa itu janggal.</p>
+          <span class="kicker">Kampanye sosial · Anti perdagangan orang</span>
+          <h1>
+            <span class="w" style="--d:0">Jangan</span>
+            <span class="w" style="--d:1">telan</span><br>
+            <span class="box"><span class="w" style="--d:2">janji</span> <span class="w" style="--d:3">manisnya</span></span><span class="w" style="--d:4">!</span>
+          </h1>
+          <p class="lead">Gaji besar, tanpa pengalaman, berangkat minggu depan. Satu tawaran kerja palsu bisa berujung eksploitasi. Kenali umpannya, lindungi dirimu, dan selamatkan temanmu juga.</p>
+          <div class="btns">
+            <a class="btn primary" href="#kuis">Uji kewaspadaanmu</a>
+            <a class="btn ghost" href="#aturan">Pelajari dulu</a>
+          </div>
         </div>
 
-        <div class="sheet-wrap">
-          <article class="sheet" aria-label="Contoh iklan lowongan kerja palsu">
-            <span class="stamp">Contoh rekaan, bukan lowongan asli</span>
-            <h2>Dicari: admin online di luar negeri</h2>
-            <p>Terbuka untuk usia 18 sampai 30 tahun.
-              <button class="flag" type="button" aria-pressed="false"
-                data-title="Tanpa syarat apa pun"
-                data-why="Pekerjaan sungguhan hampir selalu punya syarat keahlian atau pendidikan. Iklan yang menerima siapa saja biasanya mencari orang yang mudah dibujuk, bukan pekerja yang cocok.">Tanpa pengalaman, tanpa ijazah.</button></p>
-            <p>Gaji
-              <button class="flag" type="button" aria-pressed="false"
-                data-title="Gaji tidak masuk akal"
-                data-why="Penghasilan jauh di atas standar pekerjaan sejenis adalah umpan paling umum. Bandingkan dengan gaji posisi yang sama di tempat lain sebelum percaya.">Rp18 juta per bulan plus bonus.</button></p>
-            <p>
-              <button class="flag" type="button" aria-pressed="false"
-                data-title="Fasilitas gratis yang berubah jadi utang"
-                data-why="Tiket, visa, dan penginapan yang dibayari di awal sering kemudian dihitung sebagai utang. Pekerja dipaksa bekerja tanpa digaji penuh untuk melunasinya. Ini disebut jeratan utang.">Tiket, visa, dan akomodasi ditanggung kami.</button></p>
-            <p>
-              <button class="flag" type="button" aria-pressed="false"
-                data-title="Dikejar waktu, dokumen lewat chat"
-                data-why="Batas waktu yang pendek membuatmu tidak sempat bertanya ke keluarga atau memeriksa. Fotokopi paspor dan KTP yang dikirim lewat chat ke orang tak dikenal bisa disalahgunakan.">Berangkat 5 hari lagi. Kirim foto paspor lewat WhatsApp.</button></p>
-            <p>
-              <button class="flag" type="button" aria-pressed="false"
-                data-title="Tidak ada kontrak tertulis"
-                data-why="Pekerja migran berhak atas perjanjian kerja tertulis sebelum berangkat, yang memuat gaji, jam kerja, dan jenis pekerjaan. Tanpa itu, kamu tidak punya pegangan jika kenyataannya berbeda.">Tidak perlu kontrak, semua dibahas setelah tiba.</button></p>
-            <p>Hubungi: Kak Rina
-              <button class="flag" type="button" aria-pressed="false"
-                data-title="Tidak jelas siapa yang merekrut"
-                data-why="Tidak ada nama perusahaan, alamat kantor, atau nomor izin. Penempatan kerja ke luar negeri harus melalui perusahaan penempatan yang berizin, dan izinnya bisa kamu periksa.">(nomor pribadi, tanpa nama perusahaan).</button></p>
-          </article>
-
-          <p id="flag-note" class="note idle" aria-live="polite">Pilih salah satu bagian yang distabilo. Alasannya akan muncul di sini.</p>
+        <div class="demo">
+          <div class="lugtag" aria-hidden="true"><span class="string"></span><span class="tagbody">Gaji fantastis!<br>Daftar sekarang</span></div>
+          <div class="phone" aria-label="Contoh pesan lowongan kerja palsu">
+            <div class="phone-head"><span class="avatar" aria-hidden="true"></span><span>Perekrut tak dikenal · +62 8xx-xxxx</span></div>
+            <div class="msg">
+              <span class="stamp">Contoh rekaan, bukan pesan asli</span>
+              <p>Halo! Dicari admin online di luar negeri.
+                <button class="flag" type="button" aria-pressed="false"
+                  data-title="Tanpa syarat apa pun"
+                  data-why="Pekerjaan sungguhan hampir selalu punya syarat keahlian atau pendidikan. Tawaran yang menerima siapa saja biasanya mencari orang yang mudah dibujuk.">Tanpa pengalaman, tanpa ijazah.</button>
+                Gaji
+                <button class="flag" type="button" aria-pressed="false"
+                  data-title="Gaji tidak masuk akal"
+                  data-why="Penghasilan jauh di atas pekerjaan sejenis adalah umpan paling umum. Bandingkan dulu dengan gaji posisi yang sama di tempat lain.">Rp18 juta per bulan</button>
+                plus bonus.
+                <button class="flag" type="button" aria-pressed="false"
+                  data-title="Fasilitas gratis yang jadi utang"
+                  data-why="Tiket, visa, dan penginapan yang dibayari di awal sering dihitung sebagai utang. Pekerja dipaksa kerja tanpa digaji penuh untuk melunasinya. Ini disebut jeratan utang.">Tiket dan visa ditanggung kami.</button>
+                <button class="flag" type="button" aria-pressed="false"
+                  data-title="Dikejar waktu, dokumen lewat chat"
+                  data-why="Batas waktu pendek membuatmu tidak sempat bertanya atau memeriksa. Foto paspor dan KTP yang dikirim lewat chat ke orang tak dikenal bisa disalahgunakan.">Berangkat 5 hari lagi, kirim foto paspor ya.</button>
+                <button class="flag" type="button" aria-pressed="false"
+                  data-title="Tidak ada kontrak tertulis"
+                  data-why="Pekerja migran berhak atas perjanjian kerja tertulis sebelum berangkat, yang memuat gaji, jam kerja, dan jenis pekerjaan. Tanpa itu kamu tidak punya pegangan.">Tidak perlu kontrak.</button>
+                Hubungi Kak Rina
+                <button class="flag" type="button" aria-pressed="false"
+                  data-title="Tidak jelas siapa perekrutnya"
+                  data-why="Tidak ada nama perusahaan, alamat kantor, atau nomor izin. Penempatan kerja ke luar negeri harus lewat perusahaan penempatan berizin, dan izinnya bisa diperiksa.">(nomor pribadi, tanpa perusahaan)</button>.
+              </p>
+            </div>
+            <p id="flag-note" class="note" aria-live="polite">👆 Ketuk bagian yang disorot untuk tahu kenapa itu mencurigakan.</p>
+          </div>
         </div>
       </div>
+
+      <!-- tepi tiket -->
+      <div class="perf" aria-hidden="true"></div>
     </section>
 
-    <section class="band">
-      <div class="wrap">
-        <h2>Apa yang membuat sebuah tawaran disebut perdagangan orang?</h2>
-        <p class="intro">Menurut Undang-Undang Nomor 21 Tahun 2007 tentang Pemberantasan Tindak Pidana Perdagangan Orang, sebuah kasus dihitung sebagai perdagangan orang jika ada tiga unsur ini bersamaan.</p>
-        <dl class="elements">
-          <div>
-            <dt>Proses</dt>
-            <dd>Seseorang direkrut, diangkut, ditampung, dikirim, atau dipindahkan dari satu tempat ke tempat lain.</dd>
-          </div>
-          <div>
-            <dt>Cara</dt>
-            <dd>Dengan ancaman, kekerasan, penipuan, penyalahgunaan kekuasaan, jeratan utang, atau memanfaatkan kerentanan korban.</dd>
-          </div>
-          <div>
-            <dt>Tujuan</dt>
-            <dd>Untuk dieksploitasi: dipaksa bekerja, dieksploitasi secara seksual, diperbudak, atau diambil organnya.</dd>
-          </div>
-        </dl>
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="track">
+        <span>Tanya dulu 🔎</span><span>Periksa izinnya ✅</span><span>Jangan serahkan paspor 🛂</span><span>Minta kontrak tertulis 📝</span><span>Kabari keluarga 📞</span><span>Curiga kalau terlalu manis 🍭</span>
+        <span>Tanya dulu 🔎</span><span>Periksa izinnya ✅</span><span>Jangan serahkan paspor 🛂</span><span>Minta kontrak tertulis 📝</span><span>Kabari keluarga 📞</span><span>Curiga kalau terlalu manis 🍭</span>
       </div>
-    </section>
+    </div>
 
-    <section class="band" id="bacaan">
+    <!-- ATURAN -->
+    <section class="sec" id="aturan">
       <div class="wrap">
-        <h2>Bacaan untuk dibagikan ke keluarga dan teman</h2>
-        <ul class="reads">
-          <li>
-            <a href="artikel/apa-itu-tppo.html">
-              <h3>Apa itu perdagangan orang, dan siapa yang bisa jadi korban</h3>
-              <span class="time">Baca 6 menit</span>
-              <p>Bentuk-bentuknya, mitos yang sering dipercaya, dan alasan korban sulit lepas.</p>
-            </a>
-          </li>
-          <li>
-            <a href="artikel/modus-lowongan-kerja-palsu.html">
-              <h3>Lowongan kerja palsu: modus yang paling sering memakan korban</h3>
-              <span class="time">Baca 7 menit</span>
-              <p>Dari admin online sampai pengantin pesanan, ditambah pemeriksa lowongan yang bisa kamu coba sendiri.</p>
-            </a>
-          </li>
-          <li>
-            <a href="artikel/cara-melapor-dan-mencari-bantuan.html">
-              <h3>Cara melapor dan ke mana mencari bantuan</h3>
-              <span class="time">Baca 5 menit</span>
-              <p>Nomor dan lembaga yang bisa dihubungi, di dalam maupun di luar negeri.</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="band">
-      <div class="wrap">
-        <h2>Teknologi opensource yang bisa membantu menjaga diri</h2>
-        <p class="intro">Aplikasi di bawah ini gratis dan kodenya terbuka. Tidak satu pun menggantikan kewaspadaan, tapi semuanya membuat kamu lebih sulit dikendalikan.</p>
-        <div class="tech">
-          <div>
-            <h3>Signal</h3>
-            <p>Pesan dan panggilan terenkripsi. Cocok untuk berkabar dengan keluarga tanpa mudah disadap atau dipantau pihak lain.</p>
+        <div class="head rv">
+          <span class="tag t-mint">Mulai dari sini</span>
+          <h2>Tiga kebiasaan yang bisa menyelamatkanmu</h2>
+          <p class="sub">Sebelum menerima tawaran kerja, apalagi yang ke luar negeri, lakukan tiga hal ini.</p>
+        </div>
+        <div class="rules">
+          <div class="rule r1 rv" style="--k:0">
+            <span class="ico">🔎</span>
+            <h3>Tanya</h3>
+            <p>Siapa perusahaannya? Di mana kantornya? Apa pekerjaan, gaji, dan alamat tempat kerjanya? Perekrut yang jujur senang menjawab. Yang menghindar patut dicurigai.</p>
           </div>
-          <div>
-            <h3>Organic Maps</h3>
-            <p>Peta offline berbasis OpenStreetMap. Simpan lokasi KBRI, kantor polisi, dan rumah sakit di negara tujuan sebelum berangkat.</p>
+          <div class="rule r2 rv" style="--k:1">
+            <span class="ico">✅</span>
+            <h3>Periksa</h3>
+            <p>Cek izin perusahaan penempatan lewat instansi resmi pekerja migran atau dinas ketenagakerjaan. Pastikan ada perjanjian kerja tertulis, dan jangan berangkat bekerja dengan visa turis.</p>
           </div>
-          <div>
-            <h3>Bitwarden</h3>
-            <p>Simpan nomor darurat, alamat, dan salinan data penting di catatan aman, jadi tetap bisa diakses walau ponsel diganti atau hilang.</p>
+          <div class="rule r3 rv" style="--k:2">
+            <span class="ico">📞</span>
+            <h3>Kabari</h3>
+            <p>Beri tahu keluarga nama perekrut, alamat kerja, dan jadwal berangkat. Simpan nomor KBRI dan bantuan darurat. Kamu tidak boleh sendirian menanggung semua ini.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="help" aria-labelledby="help-title">
+    <!-- ANATOMI -->
+    <section class="sec dark" id="anatomi">
       <div class="wrap">
-        <h2 id="help-title">Kamu atau orang di sekitarmu butuh bantuan?</h2>
-        <p>Kamu tidak perlu yakin dulu bahwa ini perdagangan orang. Kalau ada yang terasa salah, cerita saja.</p>
-        <div class="numbers">
-          <div><b>129</b><span>SAPA, layanan telepon</span></div>
-          <div><b>0811-1129-129</b><span>SAPA, WhatsApp</span></div>
-          <div><b>110</b><span>Polisi, kondisi darurat</span></div>
+        <div class="head rv">
+          <span class="tag t-sun">Anatomi jebakan</span>
+          <h2>Bagaimana korban bisa terjerat?</h2>
+          <p class="sub">Polanya hampir selalu sama. Mengenalinya membuat kamu bisa berhenti di langkah pertama.</p>
         </div>
-        <a class="btn" href="artikel/cara-melapor-dan-mencari-bantuan.html">Lihat semua cara mencari bantuan</a>
+        <div class="flow">
+          <div class="stepc s1 rv" style="--k:0">
+            <div class="num">1</div>
+            <h3>Merayu</h3>
+            <p>Perekrut menawarkan pekerjaan impian lewat media sosial, grup chat, atau kenalan, dengan janji manis dan proses serba cepat.</p>
+          </div>
+          <div class="stepc s2 rv" style="--k:1">
+            <div class="num">2</div>
+            <h3>Menjerat</h3>
+            <p>Dokumen dipegang perekrut, biaya perjalanan dijadikan utang, dan korban dibawa jauh dari keluarga dan orang yang dikenal.</p>
+          </div>
+          <div class="stepc s3 rv" style="--k:2">
+            <div class="num">3</div>
+            <h3>Mengeksploitasi</h3>
+            <p>Pekerjaan berubah. Korban dipaksa bekerja tanpa upah layak, dikurung, diancam, atau dieksploitasi dalam bentuk lain.</p>
+          </div>
+        </div>
+        <p class="law rv"><strong>Menurut hukum:</strong> Undang-Undang Nomor 21 Tahun 2007 tentang Pemberantasan Tindak Pidana Perdagangan Orang menyebut tiga unsur: <strong>proses</strong> (merekrut, mengangkut, menampung, mengirim), dengan <strong>cara</strong> tertentu (penipuan, ancaman, kekerasan, jeratan utang, penyalahgunaan kekuasaan), untuk tujuan <strong>eksploitasi</strong>. Korban tidak harus dibawa lintas negara.</p>
+      </div>
+    </section>
+
+    <!-- MODUS -->
+    <section class="sec modus" id="modus">
+      <div class="wrap">
+        <div class="head rv">
+          <span class="tag t-coral">Modus yang sering muncul</span>
+          <h2>Jebakannya punya banyak wajah</h2>
+          <p class="sub">Ketuk kartu untuk melihat tanda-tandanya.</p>
+        </div>
+        <div class="cards">
+          <div class="mc m1 rv" style="--k:0">
+            <button class="toggle" type="button" aria-expanded="false" aria-controls="p1">
+              <span class="ico">💻</span><h3>Admin online di luar negeri</h3>
+              <span class="desc">Direkrut sebagai admin atau customer service, lalu dipaksa menjalankan penipuan online di lokasi tertutup.</span>
+              <span class="more">Lihat tanda-tandanya</span><span class="chev" aria-hidden="true">+</span>
+            </button>
+            <div class="panel" id="p1"><div><ul>
+              <li>Gaji sangat tinggi tanpa syarat keahlian.</li>
+              <li>Lokasi kerja di negara yang jarang dijadikan tujuan resmi.</li>
+              <li>Disuruh berangkat dengan visa turis.</li>
+              <li>Paspor ditahan setibanya di lokasi.</li>
+            </ul></div></div>
+          </div>
+          <div class="mc m2 rv" style="--k:1">
+            <button class="toggle" type="button" aria-expanded="false" aria-controls="p2">
+              <span class="ico">🏠</span><h3>Pekerja rumah tangga jalur cepat</h3>
+              <span class="desc">Dijanjikan berangkat lebih mudah tanpa prosedur resmi, lalu bekerja tanpa perlindungan.</span>
+              <span class="more">Lihat tanda-tandanya</span><span class="chev" aria-hidden="true">+</span>
+            </button>
+            <div class="panel" id="p2"><div><ul>
+              <li>Penyalur tidak punya izin atau tidak mau menunjukkannya.</li>
+              <li>Tidak ada pelatihan atau pemeriksaan kesehatan resmi.</li>
+              <li>Tidak boleh membawa atau memegang ponsel dan dokumen sendiri.</li>
+              <li>Jam kerja dan gaji tidak dijelaskan di awal.</li>
+            </ul></div></div>
+          </div>
+          <div class="mc m3 rv" style="--k:2">
+            <button class="toggle" type="button" aria-expanded="false" aria-controls="p3">
+              <span class="ico">⚓</span><h3>Kapal ikan dan perkebunan</h3>
+              <span class="desc">Bekerja berbulan-bulan di tempat terpencil dengan gaji tertahan dan sulit pulang.</span>
+              <span class="more">Lihat tanda-tandanya</span><span class="chev" aria-hidden="true">+</span>
+            </button>
+            <div class="panel" id="p3"><div><ul>
+              <li>Kontrak tidak ada, atau memakai bahasa yang tidak kamu pahami.</li>
+              <li>Gaji dibayar nanti atau dipotong untuk berbagai biaya.</li>
+              <li>Tidak ada sinyal atau akses komunikasi dengan keluarga.</li>
+              <li>Tidak boleh berhenti sebelum "utang" lunas.</li>
+            </ul></div></div>
+          </div>
+          <div class="mc m4 rv" style="--k:3">
+            <button class="toggle" type="button" aria-expanded="false" aria-controls="p4">
+              <span class="ico">💍</span><h3>Pengantin pesanan</h3>
+              <span class="desc">Dijanjikan menikah dengan pasangan mapan di luar negeri, lalu dikendalikan dan dimanfaatkan.</span>
+              <span class="more">Lihat tanda-tandanya</span><span class="chev" aria-hidden="true">+</span>
+            </button>
+            <div class="panel" id="p4"><div><ul>
+              <li>Pernikahan diatur cepat lewat perantara, tanpa bertemu langsung.</li>
+              <li>Keluarga diberi uang atau janji imbalan.</li>
+              <li>Dokumen dan komunikasi dikuasai pihak lain.</li>
+              <li>Cerita tentang pasangan dan pekerjaan berubah-ubah.</li>
+            </ul></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KUIS -->
+    <section class="sec quiz-sec" id="kuis">
+      <div class="wrap">
+        <div class="head rv" style="margin-inline:auto;text-align:center">
+          <span class="tag t-sun">Kuis singkat</span>
+          <h2>Berbahaya atau aman?</h2>
+          <p class="sub" style="color:#4a3a1a">Baca tawarannya, lalu tentukan. Ada 5 soal.</p>
+        </div>
+        <div class="quiz rv" id="quiz" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- BANTUAN -->
+    <section class="sec help-sec" id="bantuan">
+      <div class="wrap">
+        <div class="head rv">
+          <span class="tag t-sky">Kamu tidak sendirian</span>
+          <h2>Kalau kamu atau orang di sekitarmu butuh bantuan</h2>
+          <p class="sub">Kamu tidak perlu yakin dulu bahwa ini perdagangan orang. Kalau ada yang terasa salah, cerita saja.</p>
+        </div>
+
+        <div class="help-grid">
+          <div class="contact c1 rv" style="--k:0"><b>129</b><span><strong>SAPA</strong>, layanan Kementerian PPPA. Telepon 129 atau WhatsApp <a href="https://wa.me/628111129129">0811-1129-129</a>.</span></div>
+          <div class="contact c2 rv" style="--k:1"><b>110</b><span><strong>Polisi</strong>, untuk kondisi darurat. Atau datangi kantor polisi terdekat untuk membuat laporan.</span></div>
+          <div class="contact c3 rv" style="--k:2"><b>KBRI</b><span>Kalau di luar negeri, hubungi <strong>KBRI atau KJRI</strong> terdekat. Simpan alamat dan nomornya sebelum berangkat.</span></div>
+        </div>
+
+        <div class="two">
+          <div class="rv">
+            <h3>Langkah kalau mencurigai ada korban</h3>
+            <ol class="steps">
+              <li><strong>Dengarkan tanpa menyalahkan.</strong> Hindari "kok mau?" atau "kenapa tidak kabur?".</li>
+              <li><strong>Jangan mendatangi pelaku sendirian.</strong> Itu berbahaya bagi korban dan dirimu.</li>
+              <li><strong>Simpan bukti:</strong> tangkapan layar chat, iklan, bukti transfer, nama dan nomor perekrut.</li>
+              <li><strong>Hubungi lembaga bantuan:</strong> SAPA 129, polisi, LPSK, atau instansi pekerja migran (KP2MI).</li>
+              <li><strong>Temani korban</strong> dan hormati keputusannya soal langkah berikutnya.</li>
+            </ol>
+            <p style="font-size:.92rem;color:var(--ink-soft)">Kontak bisa berubah. Cek ulang nomor di situs resmi tiap lembaga sebelum menyimpannya.</p>
+          </div>
+          <div class="rv" style="--k:1">
+            <h3>Teknologi opensource yang membantu</h3>
+            <div class="tools">
+              <div class="tool"><span class="e">💬</span><div><b>Signal</b><p>Pesan dan panggilan terenkripsi untuk berkabar dengan keluarga secara aman.</p></div></div>
+              <div class="tool"><span class="e">🗺️</span><div><b>Organic Maps</b><p>Peta offline berbasis OpenStreetMap. Tandai lokasi KBRI, polisi, dan rumah sakit sebelum berangkat.</p></div></div>
+              <div class="tool"><span class="e">🔐</span><div><b>Bitwarden</b><p>Simpan nomor darurat dan salinan dokumen penting di catatan terenkripsi.</p></div></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site">
+  <footer>
     <div class="wrap">
-      <span>Jaga Langkah, tugas mata kuliah Aplikasi dan Teknologi.</span>
-      <span>Dibuat dengan HTML dan CSS, di-hosting di GitHub Pages.</span>
+      <p><b>Jaga Langkah</b>, kampanye sosial untuk tugas mata kuliah Aplikasi dan Teknologi.</p>
+      <p>Dibuat dengan HTML, CSS, dan JavaScript, di-hosting di GitHub Pages.</p>
     </div>
   </footer>
 
